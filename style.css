@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat ;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 850px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  box-shadow: 0px 8px 48px 0px #444;
+}
+
+.questions {
+  width: 300px;
+  margin-top: 50px;
+}
+
+.faq {
+  margin: 10px 0;
+  color: hsl(240, 6%, 50%);
+}
+
+.activeQuestion {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+  transition: all 0.5s ease;
+}
+
+.answer {
+  max-height: 0;
+  /* margin-top: 10px; */
+  overflow: hidden;
+  /* display: none; */
+  transition: max-height .5s ease;
+}
+
+.showAnswer {
+  /* height: auto; */
+  max-height: 60px;
+  transition: max-height .5s ease;
+}
+
+.illustration {
+  position: relative;
+  overflow: hidden;
+}
+
+#pattern {
+  position: absolute;
+  left: -579px;
+    top: -311px;
+}
+
+#woman {
+  position: relative;
+  left: -85px;
+    top: 60px;
+}
+
+#box{
+  position: absolute;
+  left: -93px;
+    top: 193px;
+}
+
+hr {
+  border: .5px solid hsl(240, 5%, 91%)
+}
+
+@media screen and (max-width: 940px) {
+
+  body {
+    padding-top: 90px;
+  }
+
+  .container {
+    width: 355px;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: ; */
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  .questions {
+    margin-top: 0;
+  }
+
+  .illustration {
+    overflow: visible;
+    height: 156px;
+  }
+
+  #woman {
+    width: 270px;
+    top: -122px;
+    left: 0px;
+  }
+
+  #pattern {
+    width: 270px;
+    top: -143px;
+    left: 0;
+  }
+
+  #box {
+    width: 120px;
+    top: -53px;
+    left: 36px;
+  }
+}
